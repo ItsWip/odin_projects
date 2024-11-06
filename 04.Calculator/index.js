@@ -34,6 +34,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
         sign= "";
     })
+
+    equal.addEventListener("click", function(){
+        calculate();
+
+        old.textContent="";
+        next.textContent=old_value;
+    })
+
 })
 
 function display_numbers(i){
@@ -46,4 +54,27 @@ function display_sign(i){
     sign = i;
     old_value = next_value;
     next_value = "";
+}
+
+function calculate(){
+    old_value= Number(old_value);
+    next_value= Number(next_value);
+
+    if(sign=== "+"){
+        old_value += next_value;
+    }else if(sign=== "-"){
+        old_value -= next_value;
+    }else if(sign=== "X"){
+        old_value *= next_value;
+    }else{
+        old_value /= next_value;
+    }
+
+    old_value=round_number(old_value);
+    old_value=old_value.toString();
+    next_value=next_value.toString();
+}
+
+function round_number(i){
+    return Math.round(i * 1000) / 1000;
 }
