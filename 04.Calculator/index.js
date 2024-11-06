@@ -38,8 +38,12 @@ document.addEventListener("DOMContentLoaded", function(){
     equal.addEventListener("click", function(){
         calculate();
 
-        old.textContent="";
-        next.textContent=old_value;
+        next.textContent="";
+        old.textContent=old_value;
+    })
+
+    period.addEventListener("click", function(){
+        decimal();
     })
 
 })
@@ -77,4 +81,11 @@ function calculate(){
 
 function round_number(i){
     return Math.round(i * 1000) / 1000;
+}
+
+function decimal(){
+    console.log("hi");
+    if(!next_value.includes(".")){
+        next_value += ".";
+    }
 }
