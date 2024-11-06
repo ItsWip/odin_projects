@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     sign.forEach((op) => op.addEventListener("click", function(e){
         display_sign(e.target.textContent);
-        old.textContent= old_value + " " + sign;
+        old.textContent= old_value + " " + op.textContent;
         next.textContent= next_value;
     }))
 })
