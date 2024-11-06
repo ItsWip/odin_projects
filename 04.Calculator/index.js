@@ -24,6 +24,16 @@ document.addEventListener("DOMContentLoaded", function(){
         old.textContent= old_value + " " + op.textContent;
         next.textContent= next_value;
     }))
+
+    clear.addEventListener("click", function(){
+        old_value="";
+        old.textContent=old_value;
+
+        next_value="";
+        next.textContent=next_value;
+
+        sign= "";
+    })
 })
 
 function display_numbers(i){
