@@ -1,6 +1,7 @@
 let sign= "";
 let old_value= "";
 let next_value= "";
+let sign_c=0;
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -20,9 +21,20 @@ document.addEventListener("DOMContentLoaded", function(){
     }))
 
     sign.forEach((op) => op.addEventListener("click", function(e){
-        display_sign(e.target.textContent);
-        old.textContent= old_value + " " + op.textContent;
-        next.textContent= next_value;
+        if(sign_c===0){
+            display_sign(e.target.textContent);
+            old.textContent= old_value + " " + op.textContent;
+            next.textContent= next_value;
+        }else{
+            calculate();
+            old.textContent=old_value;
+            next_value=old_value;
+            
+            display_sign(e.target.textContent);
+            old.textContent= old_value + " " + op.textContent;
+            next.textContent= next_value;
+            sign_c++;
+        }
     }))
 
     clear.addEventListener("click", function(){
@@ -40,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         next.textContent="";
         old.textContent=old_value;
+        next_value=old_value;
     })
 
     period.addEventListener("click", function(){
@@ -57,7 +70,8 @@ function display_numbers(i){
 function display_sign(i){
     sign = i;
     old_value = next_value;
-    next_value = "";
+    next_value = "";    
+    sign_c++;
 }
 
 function calculate(){
@@ -77,6 +91,8 @@ function calculate(){
     old_value=round_number(old_value);
     old_value=old_value.toString();
     next_value=next_value.toString();
+
+    sign_c=0;
 }
 
 function round_number(i){
@@ -84,7 +100,6 @@ function round_number(i){
 }
 
 function decimal(){
-    console.log("hi");
     if(!next_value.includes(".")){
         next_value += ".";
     }
