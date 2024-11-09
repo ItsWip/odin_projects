@@ -1,7 +1,7 @@
 let sign= "";
-let old_value= "";
+let old_value= "";          //taking as strings to prevent unwanted calculations
 let next_value= "";
-let sign_c=0;
+let sign_c=0;       //counting signs
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", function(){
     }))
 
     sign.forEach((op) => op.addEventListener("click", function(e){
-        if(sign_c===0){
+        if(sign_c===0){         
             display_sign(e.target.textContent);
             old.textContent= old_value + " " + op.textContent;
             next.textContent= next_value;
-        }else{
+        }else{          //if it is second operator, then the previous calculation will be completed first
             calculate();
             old.textContent=old_value;
             next_value=old_value;
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 function display_numbers(i){
-    if(next_value.length<=7){
+    if(next_value.length<=7){       //limiting input size
         next_value += i;
     }
 }
@@ -71,7 +71,7 @@ function display_sign(i){
     sign = i;
     old_value = next_value;
     next_value = "";    
-    sign_c++;
+    sign_c++;           //updating number of operators
 }
 
 function calculate(){
