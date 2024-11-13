@@ -5,6 +5,12 @@ let sign_c=0;       //counting signs
 
 document.addEventListener("DOMContentLoaded", function(){
 
+    const keys = Array.from(document.querySelectorAll('.btn'));
+    keys.forEach(key => key.addEventListener("keydown", function(e){
+        const key= document.querySelector(`div [key-data="${e.keyCode}"]`);
+        console.log(key);
+    }));
+    
     let int= document.querySelectorAll(".int");
     let sign= document.querySelectorAll(".sign");
 
