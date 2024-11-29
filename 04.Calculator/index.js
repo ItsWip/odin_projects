@@ -20,6 +20,15 @@ document.addEventListener("DOMContentLoaded", function(){
         next.textContent= next_value;
     }))
 
+    int.forEach((number) => window.addEventListener("keydown", function(i){
+        let e= document.querySelector(`button[key-data="${i.keyCode}"]`);
+        let z= (e.textContent);
+        let actual_number= toString(z);
+        console.log(z)
+        display_numbers(actual_number);
+        next.textContent= next_value;
+    }))
+
     sign.forEach((op) => op.addEventListener("click", function(e){
         if(sign_c===0){         
             display_sign(e.target.textContent);
@@ -62,6 +71,12 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 function display_numbers(i){
+    if(next_value.length<=7){       //limiting input size
+        next_value += i;
+    }
+}
+
+function display_numbers_keybind(i){
     if(next_value.length<=7){       //limiting input size
         next_value += i;
     }
