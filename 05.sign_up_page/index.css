@@ -1,11 +1,36 @@
 @import "modern-normalize.css";
 
 @font-face {
-    font-family: 'norsebold';
-    src: url('./fonts/norse-bold-webfont.woff2') format('woff2'),
-        url('./fonts/norse-bold-webfont.woff') format('woff');
+    font-family: 'Norse-Bold';
+    src: url('../fonts/Norse-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
-    background-color: aqua;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left{
+    background-image: url(odin_image/halie-west-25xggax4bSA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+
+}
+
+h1 {
+    font-family: Norse-Bold, sans-serif;
 }
