@@ -11,6 +11,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Norse-Bold, sans-serif;
 }
 
 .main{
@@ -28,11 +29,12 @@ body {
     justify-content: center;
     align-items: center;
     width: 35vw;
-
+    height: 100vh;
 }
 
 .right{
-    background-color: rgb(204, 202, 202);
+    background-color: #fafafa;
+    width: 65vw;
 }
 
 h1 {
@@ -40,19 +42,39 @@ h1 {
 }
 
 .header{
-    height: 40vh;
+    height: 33vh;
 }
+
 .form{
     background-color: white;
-    height: 30vh;
+    height: 34vh;
     padding: 5px 10px 15px;
 }
 
-form{
+.main_form{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 0px 15px;
+}
+
+form div{
+    padding: 0 15px 0;
+}
+
+form label{
+    font-size: 10px;
+}
+
+input{
+    width: 200px;
+    height: 25px;
+    border: 2px solid #E5E7EB;
+    border-radius: 4px;
+    margin-bottom: 1px;
+    padding: 0 3px 0;
+    
 }
 
 .footer{
-    height: 30vh;
+    
 }
