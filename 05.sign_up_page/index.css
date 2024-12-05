@@ -86,5 +86,16 @@ input:hover, input:focus{
 }
 
 .footer{
-    
+    padding: 30px;
+}
+
+button{
+    background-color: #596D48;
+    border-color: #E5E7EB;
+    color: white;
+    border-radius: 6px;
+    height: 35px;
+    width: 175px;
+    font-weight: bold;
+    font-family: Norse-Bold, sans-serif;
 }
