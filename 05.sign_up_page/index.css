@@ -61,9 +61,15 @@ form div{
     padding: 0 15px 0;
 }
 
-form label{
+label{
     font-size: 10px;
+    color: rgb(123, 123, 124);
 }
+
+input:invalid{
+    border: 1px solid red;
+}
+
 
 input{
     width: 200px;
@@ -71,8 +77,12 @@ input{
     border: 2px solid #E5E7EB;
     border-radius: 4px;
     margin-bottom: 1px;
-    padding: 0 3px 0;
-    
+    padding: 0 3px 0;    
+}
+
+input:hover, input:focus{
+    outline: none;
+    border: 2px solid rgb(23, 102, 192);
 }
 
 .footer{
