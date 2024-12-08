@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function(){
     let equal= document.querySelector(".equal");
     let clear= document.querySelector(".clear");
 
+    document.addEventListener("keydown", function(e){
+        let k= window.querySelector(`[keydata="${e.keyCode}"]`)
+        console.log(k);
+    })
+
     int.forEach((number) => number.addEventListener("click", function(e){
         display_numbers(e.target.textContent);
         next.textContent= next_value;
