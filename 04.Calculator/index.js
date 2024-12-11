@@ -24,11 +24,16 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         else if(e.keyCode == 190){
             decimal();
+            next.textContent= next_value;
         }
         else if(e.keyCode == 32){
+            console.log("space")
             calculate();
+            next.textContent="";
+            old.textContent=old_value;
+            next_value=old_value;
         }
-        
+        // keybind operators here ==>
     })
 
     int.forEach((number) => number.addEventListener("click", function(e){
@@ -37,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }))
 
     sign.forEach((op) => op.addEventListener("click", function(e){
+        // console.log(typeof(e));
         if(sign_c===0){         
             display_sign(e.target.textContent);
             old.textContent= old_value + " " + op.textContent;
@@ -73,12 +79,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
     period.addEventListener("click", function(){
         decimal();
+        next.textContent= next_value;
     })
 
 })
 
 function display_numbers(i){
-    console.log(typeof(i));
     if(next_value.length<=7){       //limiting input size
         next_value += i;
     }
