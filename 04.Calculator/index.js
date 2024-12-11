@@ -16,8 +16,19 @@ document.addEventListener("DOMContentLoaded", function(){
     let clear= document.querySelector(".clear");
 
     document.addEventListener("keydown", function(e){
-        let k= window.querySelector(`[keydata="${e.keyCode}"]`)
-        console.log(k);
+        const k= document.querySelector(`button[key-data="${e.keyCode}"]`)
+        
+        if(e.keyCode>47 && e.keyCode<58){
+            display_numbers(String(k.textContent));
+            next.textContent= next_value;
+        }
+        else if(e.keyCode == 190){
+            decimal();
+        }
+        else if(e.keyCode == 32){
+            calculate();
+        }
+        
     })
 
     int.forEach((number) => number.addEventListener("click", function(e){
@@ -67,10 +78,13 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 function display_numbers(i){
+    console.log(typeof(i));
     if(next_value.length<=7){       //limiting input size
         next_value += i;
     }
 }
+
+
 
 function display_sign(i){
     sign = i;
