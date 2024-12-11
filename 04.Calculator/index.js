@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(){
             calculate();
             next.textContent="";
             old.textContent=old_value;
-            next_value=old_value;
+            next_value=old_value;       //extra sign after result
         }
         // keybind operators here ==>
     })
