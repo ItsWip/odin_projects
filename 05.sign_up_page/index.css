@@ -25,12 +25,35 @@ body {
     background-image: url(odin_image/halie-west-25xggax4bSA-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     width: 35vw;
     height: 100vh;
 }
+
+.logo_holder{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    width: 35vw;
+    align-items: center;
+    background-color:rgba(0,0,0,0.4);
+    color: white;
+}
+.left_footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: bolder;
+    height: 20%;
+    color: white;
+}
+
 
 .right{
     background-color: #fafafa;
@@ -99,6 +122,7 @@ button{
     width: 175px;
     font-weight: bold;
     font-family: Norse-Bold, sans-serif;
+    box-shadow: #6b6b6a 0px 2px;
 }
 
 .error_msg{
@@ -106,7 +130,7 @@ button{
     font-size: 10px;
 }
 
-a{
+.login{
     text-decoration: none;
     color:rgb(49, 49, 49);
     font-weight:bolder;
