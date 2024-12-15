@@ -85,6 +85,19 @@ body{
     grid-column: 2/3;
     grid-row: 3/4;
 }
+.button{
+    padding: 10px 15px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#btn_1{
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+    height: 27px;
+    width: 60px;
+    border-radius: 13.5px;
+}
 
 
 
