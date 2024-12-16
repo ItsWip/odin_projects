@@ -1,45 +1,47 @@
 body{
-    height: 100vh;
-    width: 100%;
+    box-sizing: border-box;
+    height: 80vh;
     margin: 0;
     background-size:cover ;
     background-color: antiquewhite;
     display: grid;
-    grid-template-rows: 100px 1fr 1fr;
-    grid-template-columns: minmax(190px,1.5fr) 5fr 2fr;
+    grid-template-rows: minmax(7rem,11%) 1fr 1fr;
+    grid-template-columns: 13rem 55rem minmax(12rem,17rem);
 }
 
 .menu{
     height: 100%;
-    padding-top: 20px;
+    
+    padding-top: 1.5rem;
     font-family: sans-serif;
     font-size: small;
     background-color: #f59e0b;
     color: white;
-    padding-left: 20px;
+    padding-left: 1.5rem;
     grid-column: 1/2;
     grid-row: 1/4;
     display: grid;
-    grid-template-rows: 60px 30px 200px 10px 100px;
+    grid-template-rows: 3rem 2rem 12rem 1rem 3rem;
 }
 .dashboard_logo{
-    display: grid;
-    grid-template-columns: 60px 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
 }
 .personal{
     grid-row: 3/4;
     display: grid;
-    grid-template-columns: 30px 1fr ;
-    grid-template-rows: repeat(6, 30px);
+    grid-template-columns: 2rem 1fr ;
+    grid-template-rows: repeat(6, 2rem);
 }
 .setting{
     grid-row: 5/6;
     display: grid;
-    grid-template-columns: 30px 1fr ;
-    grid-template-rows: repeat(3, 30px);
+    grid-template-columns: 2rem 1fr ;
+    grid-template-rows: repeat(3, 2rem);
 }
 #text_1{
-    margin: 3px 0 7px;
+    margin: 0.2rem 0 0.4rem;
 }
 
 
@@ -53,21 +55,21 @@ body{
     padding: 12px;
     display: grid;
     grid-template-columns: 1.9fr 1fr;
-    grid-template-rows: 25px 10px 35px;
+    grid-template-rows: 1.5rem 1rem 2rem;
 }
 .search_bar{    
     display: grid;
-    grid-template-columns: 30px 1fr 10px;
+    grid-template-columns: 1.7rem 1fr minmax(1rem,4rem);
 }
 .profile{
-    padding-left: 30px;
+    padding: 1rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 10px;
+    gap: 0.7rem;
 }
 .welcome{
-    margin: 20px 15px 10px;
+    margin: 1.5rem 1rem 1rem;
     
     font-size: larger;
     font-family: sans-serif;
@@ -79,15 +81,15 @@ body{
     justify-content: left;
 }
 #mogambo{
-    border-radius: 22.5px;
-    margin-right: 10px;
+    border-radius: 2rem;
+    margin-right: 0.7rem;
 }
 .button{
     grid-column: 2/3;
     grid-row: 3/4;
 }
 .button{
-    padding: 10px 15px 0;
+    padding: 1.5rem 2rem 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -95,9 +97,9 @@ body{
 #btn_1{
     background-color: #f59e0b;
     border-color: #f59e0b;
-    height: 27px;
-    width: 60px;
-    border-radius: 13.5px;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 1rem;
 }
 
 
@@ -110,47 +112,47 @@ body{
     
 }
 .project_cards{
-    padding: 0 30px 0;
+    padding: 0 2rem 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3,1fr);
-    grid-column-gap: 15px;
-    grid-row-gap: 10px;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
 }
 #card_1{
-    height: 140px;
-    width: 320px;
+    height: 15rem;
+    width: 23rem;
     background-color: white;
-    border-radius: 10px;
-    border: 1px solid rgb(185, 184, 184);
-    border-left: 7px solid #f59e0b;
-    box-shadow: 2px 4px rgb(131, 129, 129);
+    border-radius: 1rem;
+    border: 0.1rem solid rgb(185, 184, 184);
+    border-left: 0.9rem solid #f59e0b;
+    box-shadow: 0.2rem 0.4rem rgb(131, 129, 129);
 }
 #text_2{
-    font-size: 20px;
+    font-size: 1.5rem;
     font-family: sans-serif;
-    padding: 0 15px 0;
-    margin: 15px ;
+    padding: 0 1rem 0;
+    margin: 1rem ;
 }
 
 
 
 
 .extra{
-    margin-right: 25px;
+    margin-right: 1.2rem;
     grid-column: 3/4;
     grid-row: 2/4;
     display: grid;
-    grid-template-rows: repeat(2, 40px 200px) ;
+    grid-template-rows: repeat(2, 4rem 19rem) ;
 }
 #card_2{
     background-color: white;
-    height: 200px;
-    border-radius: 10px;
-    border: 1px solid rgb(238, 230, 230);
+    height: 19rem;
+    border-radius: 1rem;
+    border: 0.3rem solid rgb(238, 230, 230);
 }
 #text_3{
-    font-size: 18px;
+    font-size: 1.5rem;
     font-family: sans-serif;
     
 }
