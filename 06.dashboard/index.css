@@ -6,7 +6,7 @@ body{
     background-color: antiquewhite;
     display: grid;
     grid-template-rows: minmax(7rem,11%) 1fr 1fr;
-    grid-template-columns: 13rem 55rem minmax(12rem,17rem);
+    grid-template-columns: 13rem 1fr minmax(12rem,20%);
 }
 
 .menu{
@@ -108,20 +108,19 @@ body{
 
 .project{
     grid-column: 2/4;
-    grid-row: 2/4;
-    
+    grid-row: 2/4; 
 }
 .project_cards{
+    margin: 1rem;
     padding: 0 2rem 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3,1fr);
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 #card_1{
+    display: grid;
+    width: 21rem;
+    margin: 1em;
     height: 15rem;
-    width: 23rem;
     background-color: white;
     border-radius: 1rem;
     border: 0.1rem solid rgb(185, 184, 184);
