@@ -29,17 +29,18 @@ function print_book(){
         let print_book= document.createElement("div");
         print_book.setAttribute("class","card");
         print_book.innerHTML=`
+        
+        <div class="card_img"></div>
         <div class="card_title">
             <H3>Title: ${my_book.title}</H3>
         </div>
         <div class="card_body">
             Author: ${my_book.author} <br>
-            Pages: ${my_book.page} <br>
-            ${my_book.read? "Read" : "Want to read"}
-        <div>
+            Pages: ${my_book.pages} 
+        <div> <br>
         <div id="btns">
-            <button id="delete" onclick="delete_book(${i})"> Delete</button>
-            <button id="read_btn" onclick="toggle_btn(${i})">${my_book.read? "Read" : "Want to read"}</button>
+            <button id="delete" onclick="delete_book(${i})">Remove</button>
+            <button id="${my_book.read? "Read" : "Not_read"}" onclick="toggle_btn(${i})">${my_book.read? "Read" : "Want to read"}</button>
         </div>`
 
         lab.appendChild(print_book);

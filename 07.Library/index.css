@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #fdf0d5;
+    box-sizing: cover;
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+}
+
+#menu{
+    background-color: #780000;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10rem 7rem 7rem 1fr;
+}
+#heading{
+    padding: 1.5rem 1rem 0;
+    display: flex;
+}
+#btn_bg{
+    
+    display: flex;
+    justify-content: center;
+}
+#add_btn{
+    background-color: #c1121f;
+    border-radius: 2.5rem;
+    border: 0.1rem solid black;
+    height: 5rem;
+    width: 5rem;
+    font-weight: 900;
+}
+
+
+
+.card{
+    height: 18rem;
+    width: 12rem;
+    color: #fdf0d5;
+    margin: 1rem;
+    background-color: #003049;
+    border: 1px solid black;
+    border-radius: 0.3rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card_img{
+    height: 8rem;
+    width: 7rem;
+    background-color: #669bbc;
+    border: 1px solid #fdf0d5;
+    border-radius: 0.2rem;
+}
+#delete{
+    width: 4.5rem;
+    height: 1.7rem;
+    font-weight: 500;
+    background-color: #780000;
+    color: #fdf0d5;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}
+#Read{
+    width: 5.7rem;
+    height: 1.7rem;
+    font-weight: 500;
+    background-color:rgb(24, 126, 24);
+    color: #fdf0d5;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}
+#Not_read{
+    width: 5.7rem;
+    height: 1.7rem;
+    font-weight: 500;
+    background-color:rgb(1, 59, 1);
+    color: #fdf0d5;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}
