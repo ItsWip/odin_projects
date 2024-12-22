@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    height: 100%;
+    
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #fdf0d5;
     box-sizing: cover;
@@ -51,6 +53,14 @@ input{
 
 
 
+#labrary{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
 .card{
     height: 18rem;
     width: 12rem;
@@ -98,3 +108,5 @@ input{
     border: 1px solid black;
     border-radius: 0.3rem;
 }
+
+

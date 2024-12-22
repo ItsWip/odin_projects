@@ -62,10 +62,13 @@ document.addEventListener("DOMContentLoaded",function(){
     add_btn.addEventListener("click", function(){
         let book_form= document.querySelector("#book_form");
         book_form.style.display="block";
+        add_btn.style.display="none";
     })
 
     let add_book= document.querySelector("#add_book");
     add_book.addEventListener("click",function(event){
+        book_form.style.display="none";
+        add_btn.style.display="block";
         event.preventDefault();
         addBookToLibrary();
     })
