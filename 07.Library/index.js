@@ -7,13 +7,21 @@ function Book(title,author,pages,read) {
     this.read= read;
 }
 
-print_book(){
+function print_book(){
     let lab= document.querySelector("#labrary");
-    for(let i=0; i<= myLibrary.length(); i++){
+    lab.innerHTML="";
+    for(let i=0; i< myLibrary.length; i++){
         let my_book= myLibrary[i];
         let print_book= document.createElement("div");
         print_book.setAttribute("class","card");
-        
+        print_book.innerHTML=`
+        <div class="card_title"> <p>
+            Title: ${my_book.title} <br>
+            Author: ${my_book.author}</p>
+        </div>`
+        print_book.style.display="block";
+        console.log(my_book);
+        lab.appendChild(print_book);
     }       
 }
 
