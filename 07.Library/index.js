@@ -72,4 +72,10 @@ document.addEventListener("DOMContentLoaded",function(){
         event.preventDefault();
         addBookToLibrary();
     })
+
+    let back=document.querySelector("#back");
+    back.addEventListener("click", function(){
+        book_form.style.display="none";
+        add_btn.style.display="block";
+    })
 })

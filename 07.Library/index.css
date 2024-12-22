@@ -1,7 +1,7 @@
 body{
     margin: 0;
     height: 100%;
-    
+
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #fdf0d5;
     box-sizing: cover;
@@ -28,8 +28,8 @@ input{
     border: 1px solid #fdf0d5;
     border-radius: 0.2rem;
 }
-#add_book{
-    margin: 0 3rem 0;
+
+#add_book #back{
     height: 2rem;
     width: 6rem;
     font-weight: bolder;
