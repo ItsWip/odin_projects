@@ -12,6 +12,15 @@ function delete_book(i){
     print_book();
 }
 
+Book.prototype.toggle= function(){
+    this.read= !this.read;
+}
+
+function toggle_btn(i){
+    myLibrary[i].toggle();
+    print_book();
+}
+
 function print_book(){
     let lab= document.querySelector("#labrary");
     lab.innerHTML="";
@@ -30,6 +39,7 @@ function print_book(){
         <div>
         <div id="btns">
             <button id="delete" onclick="delete_book(${i})"> Delete</button>
+            <button id="read_btn" onclick="toggle_btn(${i})">${my_book.read? "Read" : "Want to read"}</button>
         </div>`
 
         lab.appendChild(print_book);
