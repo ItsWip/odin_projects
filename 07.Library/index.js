@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
     let add_book= document.querySelector("#add_book");
     add_book.addEventListener("click",function(e){
-        e.preventDefault();
+        
         addBookToLibrary();
     })
 
