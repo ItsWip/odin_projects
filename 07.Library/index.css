@@ -50,6 +50,13 @@ input{
     width: 5rem;
     font-weight: 900;
 }
+#message{
+    height: 1rem;
+    padding-left: 1rem;
+
+    color: #fdf0d5;
+    font-size: 0.75rem;
+}
 
 
 

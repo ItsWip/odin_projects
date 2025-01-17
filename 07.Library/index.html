@@ -16,13 +16,14 @@
     <div id="btn_bg"><button id="add_btn">ADD BOOK</button></div>
     <form id="book_form" style="display: none;">
       <label for="title">Title:</label>
-      <input id="title" type="text">
+      <input id="title" type="text" required>
       <label for="author">Author:</label>
       <input id="author" type="text">
       <label for="pages">Pages:</label>
       <input id="pages" type="number">
       <label for="read">Read</label>
       <input id="read" type="checkbox" style="height: 1.3rem; width: 1.3rem;"><br>
+      <p id="message"></p>
       <div id="form_btn"></div>  
         <button type="button" id="back">BACK</button>
         <button type="submit" id="add_book">ADD BOOK</button>

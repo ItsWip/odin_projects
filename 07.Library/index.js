@@ -53,8 +53,15 @@ function addBookToLibrary() {
     let pages= document.getElementById("pages").value;
     let read= document.getElementById("read").checked;
     new_book= new Book(title,author,pages,read);
-    myLibrary.push(new_book);
-    print_book();
+    if(title== ""){
+        let message= document.getElementById("message");
+        message.innerHTML= `<em>"Title" field is required.</em>`
+    }else{   
+        myLibrary.push(new_book);
+        print_book();
+        book_form.style.display="none";
+        add_btn.style.display="block";
+    }
 }
 
 document.addEventListener("DOMContentLoaded",function(){
@@ -66,10 +73,8 @@ document.addEventListener("DOMContentLoaded",function(){
     })
 
     let add_book= document.querySelector("#add_book");
-    add_book.addEventListener("click",function(event){
-        book_form.style.display="none";
-        add_btn.style.display="block";
-        event.preventDefault();
+    add_book.addEventListener("click",function(e){
+        e.preventDefault();
         addBookToLibrary();
     })
 
